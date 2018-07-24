@@ -21,5 +21,17 @@ namespace jenkinsnetcore
             string result = wc.DownloadString("http://java/GetString");
             return "K8s调用（http://java/GetString）结果：" + result;
         }
+        [Route("/GetIP")]
+        public string GetJava()
+        {
+            var ips = Dns.GetHostAddresses("java");
+
+            string ipstr = "";
+            foreach (var ip in ips)
+            {
+                ipstr += ip.ToString();
+            }
+            return ipstr;
+        }
     }
 }
