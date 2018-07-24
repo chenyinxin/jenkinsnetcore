@@ -22,7 +22,7 @@ namespace jenkinsnetcore
             return "K8s调用（http://java/GetString）结果：" + result;
         }
         [Route("/GetIP")]
-        public string GetJava()
+        public string GetIP()
         {
             var ips = Dns.GetHostAddresses("java");
 
