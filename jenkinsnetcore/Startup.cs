@@ -16,6 +16,7 @@ namespace jenkinsnetcore
     {
         public Startup(IConfiguration configuration)
         {
+            
             Configuration = configuration;
         }
 
